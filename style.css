@@ -4,36 +4,26 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 1000px;
+}
+
 img {
   width: 100%;
   max-width: 100%;
 }
 
 .container {
-  width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
   .container {
-    width: 900px;
-    margin: 0 auto;
+    width: 95%;
   }
 }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 992px) {
-  .container {
-    width: 378px;
-    margin: 0 auto;
-  }
-}
 
 
 
@@ -73,22 +63,45 @@ img {
 
 .portfolio {
   padding-bottom: 100px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   position: relative;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
   .portfolio {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: center;
   }
 }
 
+.portfolio .column {
+  width: 33.3%;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 30%;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media (max-width: 992px) {
-  .portfolio {
-    grid-template-columns: repeat(1, 1fr);
+  .portfolio .column {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio .column {
+    flex-basis: 50%;
+    flex-grow: 1;
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio .column {
+    width: 100%;
   }
 }
 
@@ -97,14 +110,19 @@ img {
   user-select: none;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 
 .portfolio .img img {
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -ms-transition: transform 0.5s;
-  -o-transition: transform 0.5s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .portfolio .img img:hover {
@@ -114,155 +132,3 @@ img {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-
-
-
-
-
-
-/*? position images [Start] */
-
-/* all */
-.portfolio .img:nth-child(5) {
-  top: -136px;
-}
-
-.portfolio .img:nth-child(6) {
-  top: -176px;
-}
-
-.portfolio .img:not(.app-filter-img):nth-child(7) {
-  top: -326px;
-}
-
-
-/* app-filter */
-.portfolio .img.app-filter-img:nth-child(7) {
-  top: -136px;
-  left: 406px;
-}
-
-
-/* Web-filter */
-.portfolio .img.web-filter-img:nth-child(5) {
-  top: 0;
-}
-
-.portfolio .img.web-filter-img:nth-child(6) {
-  top: 0;
-}
-
-
-
-
-@media (max-width: 1300px) {
-
-  /* all */
-  .portfolio .img:nth-child(4) {
-    top: -156px;
-  }
-
-  .portfolio .img:nth-child(5) {
-    top: -46px;
-  }
-
-  .portfolio .img:nth-child(6) {
-    top: -156px;
-  }
-
-  .portfolio .img:nth-child(7) {
-    top: -166px;
-    left: 460px;
-  }
-
-
-  /* app-filter */
-  .portfolio .img.app-filter-img:nth-child(7) {
-    top: -156px;
-    left: 0;
-  }
-
-  .portfolio .img.app-filter-img:nth-child(4) {
-    top: 0;
-  }
-
-
-  /* Web-filter */
-  .portfolio .img.web-filter-img:nth-child(6) {
-    top: -410px;
-  }
-}
-
-
-
-
-@media (max-width: 1200px) {
-
-  /* all */
-  .portfolio .img:nth-child(4) {
-    top: -130px;
-  }
-
-  .portfolio .img:nth-child(5) {
-    top: -40px;
-  }
-
-  .portfolio .img:nth-child(6) {
-    top: -130px;
-  }
-
-  .portfolio .img:nth-child(7) {
-    top: -40px;
-    left: 0px;
-  }
-
-
-  /* app-filter */
-  .portfolio .img.app-filter-img:nth-child(7) {
-    top: -130px;
-  }
-
-
-  /* Web-filter */
-  .portfolio .img.web-filter-img:nth-child(6) {
-    top: -350px;
-  }
-}
-
-
-
-
-@media (max-width: 992px) {
-
-  /* all */
-  .portfolio .img:nth-child(4) {
-    top: 0px;
-  }
-
-  .portfolio .img:nth-child(5) {
-    top: 0px;
-  }
-
-  .portfolio .img:nth-child(6) {
-    top: 0px;
-  }
-
-  .portfolio .img:nth-child(7) {
-    top: 0px;
-  }
-
-
-  /* app-filter */
-  .portfolio .img.app-filter-img:nth-child(7) {
-    top: 0;
-  }
-
-
-  /* Web-filter */
-  .portfolio .img.web-filter-img:nth-child(6) {
-    top: 0;
-  }
-}
-
-
-/*? position images [End] */
