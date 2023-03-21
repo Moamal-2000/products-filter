@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 378px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+.filters-container {
+  width: fit-content;
+  margin: 100px auto 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.filters-container button {
+  border: none;
+  background-color: transparent;
+  color: #252525;
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+
+.filters-container button:hover,
+.filters-container button.active {
+  background-color: #1170ff;
+  color: #fff;
+}
+
+.portfolio {
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.portfolio .img {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.portfolio .img img {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+
+.portfolio .img img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+
+
+
+
+
+/*? position images [Start] */
+
+/* all */
+.portfolio .img:nth-child(5) {
+  top: -136px;
+}
+
+.portfolio .img:nth-child(6) {
+  top: -176px;
+}
+
+.portfolio .img:not(.app-filter-img):nth-child(7) {
+  top: -326px;
+}
+
+
+/* app-filter */
+.portfolio .img.app-filter-img:nth-child(7) {
+  top: -136px;
+  left: 406px;
+}
+
+
+/* Web-filter */
+.portfolio .img.web-filter-img:nth-child(5) {
+  top: 0;
+}
+
+.portfolio .img.web-filter-img:nth-child(6) {
+  top: 0;
+}
+
+
+
+
+@media (max-width: 1300px) {
+
+  /* all */
+  .portfolio .img:nth-child(4) {
+    top: -156px;
+  }
+
+  .portfolio .img:nth-child(5) {
+    top: -46px;
+  }
+
+  .portfolio .img:nth-child(6) {
+    top: -156px;
+  }
+
+  .portfolio .img:nth-child(7) {
+    top: -166px;
+    left: 460px;
+  }
+
+
+  /* app-filter */
+  .portfolio .img.app-filter-img:nth-child(7) {
+    top: -156px;
+    left: 0;
+  }
+
+  .portfolio .img.app-filter-img:nth-child(4) {
+    top: 0;
+  }
+
+
+  /* Web-filter */
+  .portfolio .img.web-filter-img:nth-child(6) {
+    top: -410px;
+  }
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+  /* all */
+  .portfolio .img:nth-child(4) {
+    top: -130px;
+  }
+
+  .portfolio .img:nth-child(5) {
+    top: -40px;
+  }
+
+  .portfolio .img:nth-child(6) {
+    top: -130px;
+  }
+
+  .portfolio .img:nth-child(7) {
+    top: -40px;
+    left: 0px;
+  }
+
+
+  /* app-filter */
+  .portfolio .img.app-filter-img:nth-child(7) {
+    top: -130px;
+  }
+
+
+  /* Web-filter */
+  .portfolio .img.web-filter-img:nth-child(6) {
+    top: -350px;
+  }
+}
+
+
+
+
+@media (max-width: 992px) {
+
+  /* all */
+  .portfolio .img:nth-child(4) {
+    top: 0px;
+  }
+
+  .portfolio .img:nth-child(5) {
+    top: 0px;
+  }
+
+  .portfolio .img:nth-child(6) {
+    top: 0px;
+  }
+
+  .portfolio .img:nth-child(7) {
+    top: 0px;
+  }
+
+
+  /* app-filter */
+  .portfolio .img.app-filter-img:nth-child(7) {
+    top: 0;
+  }
+
+
+  /* Web-filter */
+  .portfolio .img.web-filter-img:nth-child(6) {
+    top: 0;
+  }
+}
+
+
+/*? position images [End] */
